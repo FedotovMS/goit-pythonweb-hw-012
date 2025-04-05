@@ -4,7 +4,6 @@ from pydantic import ConfigDict
 
 class Settings(BaseSettings):
     DB_URL: str = "postgresql+asyncpg://postgres:mypassword@localhost:5432/contacts_db"
-    SECRET_KEY: str
     MAIL_USERNAME: str
     MAIL_PASSWORD: str
     MAIL_FROM: str
