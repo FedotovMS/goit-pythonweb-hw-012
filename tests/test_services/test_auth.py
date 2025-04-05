@@ -1,5 +1,5 @@
 import pytest
-from unittest.mock import AsyncMock, patch
+from unittest.mock import patch
 from datetime import datetime, timedelta
 from fastapi import HTTPException
 
