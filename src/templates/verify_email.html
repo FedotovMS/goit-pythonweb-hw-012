@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Email Verification</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        text-align: center;
+        padding: 40px;
+      }
+      .container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        max-width: 400px;
+      }
+      h3 {
+        color: #333;
+      }
+      p {
+        color: #666;
+        font-size: 16px;
+      }
+      .button {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 12px 20px;
+        background-color: #007bff;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+      }
+      .button:hover {
+        background-color: #0056b3;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #888;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h3>Welcome to Contacts App!</h3>
+      <p>Click the button below to verify your email:</p>
+      <a
+        href="http://127.0.0.1:8000/users/verify?token={{ token }}"
+        class="button"
+        >Verify Your Account</a
+      >
+      <p class="footer">
+        If you didn’t request this, please ignore this email.
+      </p>
+    </div>
+  </body>
+</html>

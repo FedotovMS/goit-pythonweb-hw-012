@@ -1,0 +1,41 @@
+[project]
+name = "goit-pythonweb-hw-10"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Mykola Fedotov",email = "fedotovns@gmail.com"}
+]
+
+requires-python = ">=3.11,<4.0"
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+fastapi = "0.115.11"
+sqlalchemy = {version = "2.0.39", extras = ["asyncio"]}
+alembic = "1.15.1"
+asyncpg = "0.30.0"
+pydantic-settings = "2.8.1"
+greenlet = "3.1.1"
+pydantic = {version = "2.10.6", extras = ["email"]}
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+python-jose = {extras = ["cryptography"], version = "^3.4.0"}
+slowapi = "^0.1.9"
+fastapi-mail = "^1.4.2"
+cloudinary = "^1.43.0"
+python-multipart = "^0.0.20"
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+httpx = "^0.28.1"
+redis = "^5.2.1"
+fastapi-cache2 = "^0.2.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+black = "^25.1.0"
+fastapi-cli = "^0.0.7"
+sphinx = "^8.2.3"
+
+[tool.poetry]
+packages = [{include = "src"}]
