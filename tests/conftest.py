@@ -73,12 +73,12 @@ async def app():
 
 # Fixture to set up an async client for testing the FastAPI app
 @pytest_asyncio.fixture
-async def async_client(app):
+async def async_client(app_instance):
     """
     Set up an asynchronous HTTP client to make requests to the FastAPI app.
     """
     # Initialize the async client with the FastAPI app
-    async with AsyncClient(app=app, base_url="http://test") as client:
+    async with AsyncClient(app=app_instance, base_url="http://test") as client:
         yield client
 
 
