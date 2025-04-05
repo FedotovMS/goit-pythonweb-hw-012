@@ -88,7 +88,7 @@ def test_user():
     """
     Provide a mock user object for testing purposes.
     """
-    return {"email": "test@example.com", "password": "password123"}
+    return {"email": "test@test.com", "password": "test445566"}
 
 
 # Mock contact data fixture for testing contact-related functionality
@@ -98,10 +98,10 @@ def test_contact():
     Provide a mock contact object for testing purposes.
     """
     return {
-        "first_name": "John",
-        "last_name": "Doe",
-        "email": "john.doe@example.com",
-        "phone_number": "1234567890",
+        "first_name": "ivan",
+        "last_name": "ivanov",
+        "email": "ivan.doe@test.com",
+        "phone_number": "0671234567",
         "birth_date": "2000-01-01T00:00:00Z",
         "additional_info": "Test contact",
     }
@@ -113,7 +113,7 @@ def test_admin():
     """
     Provide a mock admin user object for testing purposes.
     """
-    return {"email": "admin@example.com", "password": "adminpassword", "role": "admin"}
+    return {"email": "admin@test.com", "password": "adminpassword", "role": "admin"}
 
 
 # Fixture to mock JWT token decoding for authentication tests
@@ -124,7 +124,7 @@ def mock_jwt(monkeypatch):
     """
     def mock_decode(*args, **kwargs):
         # Mock the decoded JWT payload
-        return {"sub": "test@example.com", "type": "access"}
+        return {"sub": "test@test.com", "type": "access"}
 
     # Patch the 'decode' method from the JWT library with our mock function
     monkeypatch.setattr("jose.jwt.decode", mock_decode)
@@ -142,10 +142,10 @@ async def mock_redis_cache(monkeypatch):
     class MockRedisCache:
         async def get_user_data(self, email):
             # Return mock user data based on the email
-            if email == "test@example.com":
+            if email == "test@test.com":
                 return {
                     "id": 1,
-                    "email": "test@example.com",
+                    "email": "test@test.com",
                     "created_at": "2023-01-01T00:00:00",
                     "avatar_url": None,
                     "role": "user",
